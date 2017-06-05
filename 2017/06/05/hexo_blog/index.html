@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo Doc | iefhong&#39;s blog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="other," />
+  
+
+  <meta name="description" content="Hexo博客的用法，官方的文档写的有一些简单。很多点受限于英文水平，一直没有看懂。后面通过实践以及一些技术博客，慢慢了解到Hexo的语法。   Hexo结构 _config.yml  源代码文件夹下的_config.yml文件，通过yaml文件进行Hexo的基本设置。[站点信息、链接、源码文件夹、写作格式、分类、标签、时间格式、分页、主题、发布等] source文件夹  用于存放markdown文">
+<meta name="keywords" content="other">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo Doc">
+<meta property="og:url" content="http://iefhong.me/2017/06/05/hexo_blog/index.html">
+<meta property="og:site_name" content="iefhong&#39;s blog">
+<meta property="og:description" content="Hexo博客的用法，官方的文档写的有一些简单。很多点受限于英文水平，一直没有看懂。后面通过实践以及一些技术博客，慢慢了解到Hexo的语法。   Hexo结构 _config.yml  源代码文件夹下的_config.yml文件，通过yaml文件进行Hexo的基本设置。[站点信息、链接、源码文件夹、写作格式、分类、标签、时间格式、分页、主题、发布等] source文件夹  用于存放markdown文">
+<meta property="og:updated_time" content="2017-06-05T06:54:20.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo Doc">
+<meta name="twitter:description" content="Hexo博客的用法，官方的文档写的有一些简单。很多点受限于英文水平，一直没有看懂。后面通过实践以及一些技术博客，慢慢了解到Hexo的语法。   Hexo结构 _config.yml  源代码文件夹下的_config.yml文件，通过yaml文件进行Hexo的基本设置。[站点信息、链接、源码文件夹、写作格式、分类、标签、时间格式、分页、主题、发布等] source文件夹  用于存放markdown文">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+
+  
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">Go to</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">Go to</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/categories/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/tags/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo结构"><span class="toc-text">Hexo结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo常用命令"><span class="toc-text">Hexo常用命令</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-hexo_blog" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Hexo Doc</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.06.05</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>iefhong</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/programming/">programming</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>Hexo博客的用法，官方的文档写的有一些简单。很多点受限于英文水平，一直没有看懂。<br>后面通过实践以及一些技术博客，慢慢了解到Hexo的语法。  </p>
+<h1 id="Hexo结构"><a href="#Hexo结构" class="headerlink" title="Hexo结构"></a>Hexo结构</h1><ul>
+<li>_config.yml<br>  源代码文件夹下的_config.yml文件，通过yaml文件进行Hexo的基本设置。[站点信息、链接、源码文件夹、写作格式、分类、标签、时间格式、分页、主题、发布等]</li>
+<li>source文件夹<br>  用于存放markdown文档和assets文件夹(需要配置post_asset_folder为true)</li>
+<li>public文件夹<br>  用于存放编译后的Hexo静态页面</li>
+<li>scaffolds文件夹<br>  用于设置博客基本样式,不是很懂</li>
+<li>themes文件夹<br>  用于保存、设置主题</li>
+<li>db.json<br>  用于保存Hexo的变量信息，包含hexo的分类、标签信息等。自动生成，除必要的删除某些信息，否则不去修改。</li>
+</ul>
+<h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><ul>
+<li><p>Init</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init [folder]</div></pre></td></tr></table></figure>
+<p>  folder为项目名，命令为生成一个新的Hexo项目</p>
+</li>
+<li><p>New</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+<p>  layout默认为文章，title为文件标题(有空格时，需要用引号)<br>  layout</p>
+<ul>
+<li>page<br>页面</li>
+<li>post<br>文章 (default)</li>
+<li>archive<br>文档</li>
+<li>category<br>分类</li>
+<li>tag<br>标签  </li>
+</ul>
+</li>
+<li><p>生成静态页面</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+</li>
+<li><p>本地服务器调试</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+</li>
+<li><p>发布</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+</li>
+<li><p>清理缓存文件db.json</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+    
+  </div>
+</article>
+
+
+   <!--
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持一下</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+-->
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/06/05/weekly-0601-0604/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/categories/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/tags/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+    
+	
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
