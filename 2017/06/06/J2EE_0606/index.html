@@ -7,25 +7,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>重新开始 | iefhong&#39;s blog</title>
+  <title>J2EE（路灯项目初识） | iefhong&#39;s blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="other," />
+    <meta name="keywords" content="java," />
   
 
-  <meta name="description" content="半年过去，尝试做的几件事情都没有做好。挫折感越来越深，这个时候的我是真不靠谱…   不想再沉浸于消极情绪！！！是时候重新出发，再次尝试去做一些’蠢’事情。 To exist is to change, to change is to mature, to mature is to go on creating oneself endlessly.   要生存就要变化，要变化就要成长，要成长就要不断">
-<meta name="keywords" content="other">
+  <meta name="description" content="环境搭建IdeaJDK8Postgres 目录结构 数据访问层(DAL)  mybatis mybatis-spring spring-orm postgresql   业务逻辑层(BIZ)  cmdserver netty springframework.beans apache.commons   schedule sunrisesunsetlib-java springframework.b">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重新开始">
-<meta property="og:url" content="http://iefhong.me/2017/05/31/restart-20170531/index.html">
+<meta property="og:title" content="J2EE（路灯项目初识）">
+<meta property="og:url" content="http://iefhong.me/2017/06/06/J2EE_0606/index.html">
 <meta property="og:site_name" content="iefhong&#39;s blog">
-<meta property="og:description" content="半年过去，尝试做的几件事情都没有做好。挫折感越来越深，这个时候的我是真不靠谱…   不想再沉浸于消极情绪！！！是时候重新出发，再次尝试去做一些’蠢’事情。 To exist is to change, to change is to mature, to mature is to go on creating oneself endlessly.   要生存就要变化，要变化就要成长，要成长就要不断">
-<meta property="og:updated_time" content="2017-05-31T08:36:11.118Z">
+<meta property="og:description" content="环境搭建IdeaJDK8Postgres 目录结构 数据访问层(DAL)  mybatis mybatis-spring spring-orm postgresql   业务逻辑层(BIZ)  cmdserver netty springframework.beans apache.commons   schedule sunrisesunsetlib-java springframework.b">
+<meta property="og:updated_time" content="2017-06-12T00:55:12.024Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重新开始">
-<meta name="twitter:description" content="半年过去，尝试做的几件事情都没有做好。挫折感越来越深，这个时候的我是真不靠谱…   不想再沉浸于消极情绪！！！是时候重新出发，再次尝试去做一些’蠢’事情。 To exist is to change, to change is to mature, to mature is to go on creating oneself endlessly.   要生存就要变化，要变化就要成长，要成长就要不断">
+<meta name="twitter:title" content="J2EE（路灯项目初识）">
+<meta name="twitter:description" content="环境搭建IdeaJDK8Postgres 目录结构 数据访问层(DAL)  mybatis mybatis-spring spring-orm postgresql   业务逻辑层(BIZ)  cmdserver netty springframework.beans apache.commons   schedule sunrisesunsetlib-java springframework.b">
 
   
 
@@ -135,17 +135,22 @@
 </div>
 
 
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Posts List</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#环境搭建"><span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#目录结构"><span class="toc-text">目录结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#工具"><span class="toc-text">工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Marven"><span class="toc-text">Marven</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gradle"><span class="toc-text">Gradle</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring"><span class="toc-text">Spring</span></a></li></ol>
+  </div>
+
 
 
 <div class="content content-post CENTER">
-   <article id="post-restart-20170531" class="article article-type-post" itemprop="blogPost">
+   <article id="post-J2EE_0606" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">重新开始</h1>
+    <h1 class="post-title">J2EE（路灯项目初识）</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2017.05.31</span>
+        <span>2017.06.06</span>
       </span>
 
       
@@ -158,7 +163,7 @@
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/life/">life</a>
+    <a class="article-category-link" href="/categories/programming/">programming</a>
   </span>
 
 
@@ -180,11 +185,84 @@
 
   <div class="article-content">
     
-      <p>半年过去，尝试做的几件事情都没有做好。<br>挫折感越来越深，这个时候的我是真不靠谱…  </p>
-<p>不想再沉浸于消极情绪！！！<br>是时候重新出发，再次尝试去做一些’蠢’事情。</p>
-<p><em>To exist is to change, to change is to mature, to mature is to go on creating oneself endlessly.</em>  </p>
-<p><em>要生存就要变化，要变化就要成长，要成长就要不断地自我创新。——亨利·柏格森</em></p>
-<p>: )</p>
+      <h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>Idea<br>JDK8<br>Postgres</p>
+<h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><ul>
+<li><p>数据访问层(DAL)</p>
+<ul>
+<li>mybatis</li>
+<li>mybatis-spring</li>
+<li>spring-orm</li>
+<li>postgresql</li>
+</ul>
+</li>
+<li><p>业务逻辑层(BIZ)</p>
+<ul>
+<li>cmdserver<ul>
+<li><a href="">netty</a></li>
+<li><a href="">springframework.beans</a></li>
+<li><a href="http://commons.apache.org/" target="_blank" rel="external">apache.commons</a></li>
+</ul>
+</li>
+<li>schedule<ul>
+<li><a href="https://github.com/mikereedell/sunrisesunsetlib-java" target="_blank" rel="external">sunrisesunsetlib-java</a></li>
+<li><a href="">springframework.beans</a></li>
+</ul>
+</li>
+<li>util<ul>
+<li>验证码生成器</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>JERSEY<ul>
+<li><a href="">jersey</a>    </li>
+<li><a href="">javax.servlet-api</a></li>
+</ul>
+</li>
+<li>WEB<ul>
+<li><a href="">atlassian</a></li>
+<li><a href="">hsqldb</a></li>
+<li><a href="">velocity</a><h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1></li>
+</ul>
+</li>
+<li><p><a href="http://maven.apache.org/" target="_blank" rel="external">Marven</a></p>
+<ul>
+<li>The POM<br>pom.xml file is the core of a project’s configuration in Maven  </li>
+</ul>
+</li>
+<li><p><a href="http://www.mybatis.org/mybatis-3/zh/index.html" target="_blank" rel="external">Mybatis</a></p>
+<ul>
+<li>配置Marven</li>
+<li>SqlSessionFactory</li>
+<li>SqlSession</li>
+<li>作用域（Scope）和生命周期</li>
+<li>Mapper XML文件<ul>
+<li>Result Maps</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Marven"><a href="#Marven" class="headerlink" title="Marven"></a>Marven</h1><ul>
+<li>pom.xml    <ul>
+<li><modelversion>. POM model version (always 4.0.0).</modelversion></li>
+<li><groupid>. Group or organization that the project belongs to. Often expressed as an inverted domain name.</groupid></li>
+<li><artifactid>. Name to be given to the project’s library artifact (for example, the name of its JAR or WAR file).</artifactid></li>
+<li><version>. Version of the project that is being built.</version></li>
+<li><packaging> - How the project should be packaged. Defaults to “jar” for JAR file packaging. Use “war” for WAR file packaging.        </packaging></li>
+</ul>
+</li>
+</ul>
+<h1 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h1><ul>
+<li>Gradle Task<ul>
+<li>gradle build</li>
+<li>.\gradlew run (terminal)</li>
+</ul>
+</li>
+</ul>
+<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><ul>
+<li>deploy by war<br>  <a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-create-a-deployable-war-file" target="_blank" rel="external">howto-create-a-deployable-war-file</a></li>
+</ul>
 
     
   </div>
@@ -215,10 +293,10 @@
 -->
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2017/05/31/hello-world/">
+    <a class="show pull-left" href="/2017/06/06/Words/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2017/06/05/weekly-0601-0604/">
+    <a class="show pull-right" href="/2017/06/12/weekly-24/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
